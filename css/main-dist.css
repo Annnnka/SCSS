@@ -12,14 +12,14 @@ body {
 
 .header a {
   float: left;
-  color: black;
-  text-align: center;
   padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
   font-family: Andale Mono, monospace;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
 }
 
 .header a.logo {
@@ -85,6 +85,6 @@ body {
     width: 300px;
   }
 }
-.p:not(.no) {
+p:not(.no) {
   text-indent: 20px;
 }

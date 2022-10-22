@@ -1,11 +1,23 @@
 
-// Можно задать параметр переменной и использовать ее например в качестве значения
+
 $textcolor: black;
 $bgcolor:#5d82ba;
+$mr: 0;
+$pd:0;
 
+//Замиксовали фунуции свзанные с текстом
+@mixin font {
+  font-family:Andale Mono, monospace;
+  font-size: 18px;
+  text-decoration: none;
+  color: $textcolor;
+  text-align: center;
+  
+}
+//Применили переменные
 body{
-    margin: 0;
-    padding: 0;
+    margin: $mr;
+    padding: $pd;
     font-family: Bradley Hand, cursive;
   }
   .header {
@@ -15,16 +27,13 @@ body{
       
     
     }
+    //Применили mixin
     .header a {
-        float: left;
-        color: $textcolor;
-        text-align: center;
+        float: left;       
         padding: 12px;
-        text-decoration: none;
-        font-size: 18px;
         line-height: 25px;
         border-radius: 4px;
-        font-family:Andale Mono, monospace;
+        @include font;
       }
       
       
@@ -54,8 +63,8 @@ body{
       .img-body {
         width: 32%;
         height: 30vw;
-        margin: 0;
-        padding: 0;
+        margin: $mr;
+        padding: $pd;
         justify-content: center;
       }
       .title, p{
@@ -87,6 +96,6 @@ body{
     
       }
     //   Можно обратиться ко всем P у которых нет класса no
-      .p:not(.no){
+      p:not(.no){
         text-indent: 20px;
       }
